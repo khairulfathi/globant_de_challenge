@@ -1,3 +1,17 @@
+#
+#   Area of improvements:
+#   1. To separate config from code (e.g. Azure Blob Storage credentials, database connection, etc.). This can be done by using environment variables. Add to .gitignore to avoid uploading sensitive information to GitHub.
+#   2. To add unit tests to the code.
+#   3. To add a function to validate the CSV files before inserting data into the database.
+#   4. To add a function to validate the CSV files before uploading them to Azure Blob Storage.
+#   5. To add a function to validate the data before inserting it into the database.
+#   6. To add a function to validate the data before uploading it to Azure Blob Storage.
+#   7. To add a function to compress the CSV files before uploading into Azure Blob Storage to conserve storage.
+#   8. To add a function to encrypt the CSV files before uploading into Azure Blob Storage to conserve security.
+#   9. To split migration functions (e.g. insert_data, upload_to_azure_blob) into different files.
+#   10. Table creation scripts to be split into different files.
+#
+
 from flask import Flask, request, jsonify
 import csv
 from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table, DateTime
